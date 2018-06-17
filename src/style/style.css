@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    background: url(img/battlefield.jpg);
+    background-size: cover;
+}
+
+.shadow {
+    background: rgba(0,0,0, 0.6);
+}
+
+.battlefield {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.registration-wrapper {
+    margin: 200px auto 50px;
+    width: 400px;
+    height: 200px;
+    background: rgba(0,0,0, 0.7);
+    color: white;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+.registration {
+    margin: 40px auto;
+}
+
+.hello {
+    color: red;
+    font-size: 20px;
+    position: relative;
+    left: 70px;
+    bottom: 10px;
+}
+
+.start {
+    width: 130px;
+    border-radius: 40%;
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 50px auto;
+    background: rgba(170, 139, 35, 0.5);
+    cursor: pointer;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+.field {
+    margin: auto;
+    width: 1200px;
+    height: 540px;
+    position: relative;
+    bottom: 0px;
+}
+
+.max-health {
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+    margin: 20px 50px 0px 50px;
+}
+
+.health {
+    height: 30px;
+    background: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height:28px;
+}
+
+.monster-health {
+    width: 300px;
+}
+
+.player-health {
+    width: 300px;
+}
+
+.health-bars {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+}
+
+.name {
+    color: white;
+    margin: 10px 60px 0px 60px;
+    font-size: 20px;
+    background: rgba(0,0,0, 0.5)
+}
+
+.fight {
+    background: linear-gradient(45deg, rgb(236, 11, 11), rgb(218, 241, 9));
+    width: 250px;
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 30%;
+    margin: 300px auto;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-table {
+    color: white;
+    font-size: 20px;
+    border: 3px solid lightblue;
+    line-height:35px;
+    position: absolute;
+    bottom: 250px;
+    left: 330px;
+}
+.modal-table td {
+    border-bottom: 1px solid lightblue;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.modal-table td:hover {
+    background: rgb(0,0,0);
+}
+
+.modal-table tr:last-child td {
+    border-bottom: none;
+}
+
+.modal-window {
+    width: 300px;
+    height: 200px;
+    background: lightblue;
+    border: 3px solid lightskyblue;
+    position: absolute;
+    bottom: 250px;
+    left: 330px;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.modal-window input {
+    font-size: 25px;
+}
+
+.plus {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 190px;
+    left: 130px;
+}
+
+.dictionary {
+    position: absolute;
+    bottom: 190px;
+    left: 130px;
+}
+
+.mud {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 190px;
+    bottom: 150px;
+}
+
+.win-wrapper {
+    border: 2px solid white;
+    background: rgba(0,0,0, 0.8);
+    margin: auto;
+    margin: 150px auto;
+    width: 400px;
+    height: 170px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+.records-wrapper {
+    margin: 120px auto;
+    border: white;
+    color: white;
+    background: rgba(0,0,0, 0.8);
+    font-size: 20px;
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.records ol li {
+    text-align: left;
+    padding: 0px 0px 2px 5px;
+}
+
+.mage {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+}
+
+.monster-body {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+
+.monster-head {
+    position: absolute;
+    bottom: 120px;
+    right: 55px;
+}
+
+.monster-weapon {
+    position: absolute;
+    bottom: 100px;
+    right: 103px;
+}
+
+
+
