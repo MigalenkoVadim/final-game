@@ -3,7 +3,7 @@ module.exports = {
   mode: "production",
   entry: './src/js/login',
   output: {
-    filename: './src/game.js',
+    filename: './game.js',
     library: 'home'
   },
 
@@ -16,8 +16,7 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader'
+      test: /\.js$/
     }]
   }
 };

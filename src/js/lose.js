@@ -2,7 +2,6 @@ import {score} from './win.js';
 import {user} from './login.js';
 import {start} from './start.js';
 import {login} from './login.js'
-
 let records = [];
 
 if (localStorage.getItem('records') !== null) {
@@ -10,34 +9,8 @@ if (localStorage.getItem('records') !== null) {
 }
 
 export function lose() {    
-        let strScore = score + " " + "monsters" + " - " + user.lastName + " " + user.firstName + " (" + user.email + ").";
-        if (records.length == 0) {
-            records.push(strScore);
-        } else if (records.length < 5) {
-            let arrLength = records.length
-            for (let i = 0; i <= arrLength; i++) {
-                if (parseFloat(records[i]) < parseFloat(strScore)) {
-                    let int = records[i];
-                    records[i] = strScore;
-                    strScore = int;
-                }
-                if (records[i] == undefined && strScore !== undefined) {
-                    records[i] = strScore;
-                }
-            }
-        } else {
-            for (let i = 0; i <= 5; i++) {
-                if (parseFloat(records[i]) < parseFloat(strScore)) {
-                    let int = records[i];
-                    records[i] = strScore;
-                    strScore = int;
-                }
-            }
-        }
-        localStorage.setItem('records', JSON.stringify(records));
-
+        createRecordsArray();
         $('.battlefield').addClass('shadow');
-
         $('.battlefield').html(`<section class='records-wrapper'>
             <h1>You lose.</h1>
             <div class='records'>
@@ -64,4 +37,32 @@ export function lose() {
             $('.field').remove();
             login();
         });
+}
+
+function createRecordsArray() {
+    let strScore = score + " " + "monsters" + " - " + user.lastName + " " + user.firstName + " (" + user.email + ").";
+    if (records.length == 0) {
+        records.push(strScore);
+    } else if (records.length < 5) {
+        let arrLength = records.length
+        for (let i = 0; i <= arrLength; i++) {
+            if (parseFloat(records[i]) < parseFloat(strScore)) {
+                let int = records[i];
+                records[i] = strScore;
+                strScore = int;
+            }
+            if (records[i] == undefined && strScore !== undefined) {
+                records[i] = strScore;
+            }
+        }
+    } else {
+        for (let i = 0; i <= 5; i++) {
+            if (parseFloat(records[i]) < parseFloat(strScore)) {
+                let int = records[i];
+                records[i] = strScore;
+                strScore = int;
+            }
+        }
+    }
+    localStorage.setItem('records', JSON.stringify(records));
 }

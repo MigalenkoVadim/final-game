@@ -47,6 +47,6 @@ export function lossPlayerHP() {
     if (playerHealth == 0) {
         lose()
     } else {
-        setTimeout(attackPlayer, 2000);
+        setTimeout(attackPlayer, 1000);
     }
 } 

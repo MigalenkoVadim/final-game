@@ -6,8 +6,6 @@ import {score} from './win.js';
 let img;
 
 export function start() {
-//    $('.registration-wrapper').remove();
-//   $('.start').remove();
     $('.health-bars').remove();
     $('.field').remove(); 
 
@@ -25,17 +23,13 @@ export function start() {
         <div class = 'field'> 
         </div>`
     );
-
     $('.field').append(`<img src='./style/img/mage.jpg.png' alt='hero' class='mage'> `);
     
-
     createMonster();
-
 
     $('.battlefield').html(`
         <div class='fight'>Fight!</div>
     `);
-
     $('.fight').click(function() {
         attackPlayer(); 
     });

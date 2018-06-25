@@ -29,7 +29,14 @@ export function login() {
       </section>
       <div class='start'>Start!</div>
     `);
-    
+    createUser()
+}
+
+$('.start').click(function() {
+    start();
+});
+
+function createUser() {
     if (localStorage.getItem('first-name') !== null) {
         user.firstName = localStorage.getItem('first-name');
         user.lastName = localStorage.getItem('last-name');
@@ -47,10 +54,6 @@ export function login() {
         localStorage.setItem('first-name', user.firstName);
         localStorage.setItem('last-name', user.lastName);
         localStorage.setItem('email', user.email);
-    });
-
-    $('.start').click(function() {
-        start();
     });
 }
 export {user};
